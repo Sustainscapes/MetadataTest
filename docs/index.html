@@ -1,0 +1,384 @@
+<html>
+  <head>
+    <title>Test for metadate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="application/ld+json">
+      {
+  "@context": "http://schema.org",
+  "type": "Dataset",
+  "name": "Test for metadate",
+  "creator": [
+    {
+      "type": "Person",
+      "id": null,
+      "email": "derk.corcoran@bio.au.dk",
+      "affiliation": "Sustainscapes",
+      "name": "Derek  Corcoran"
+    },
+    {
+      "type": "Person",
+      "id": null,
+      "email": "heidilunde@bio.au.dk",
+      "affiliation": "Sustainscapes",
+      "name": "Heidi Dueholm Lunde"
+    }
+  ],
+  "description": "This is a test where we have some data and try to create some metadata",
+  "datePublished": "2021-11-04",
+  "keywords": "WP5",
+  "funder": "Sustainscapes",
+  "temporalCoverage": "NA/NA",
+  "license": null,
+  "spatialCoverage": {
+    "type": "Place",
+    "name": "Denmark",
+    "geo": {
+      "type": "GeoShape",
+      "box": "60 15 50 7"
+    }
+  },
+  "variableMeasured": [
+    {
+      "type": "PropertyValue",
+      "unitText": "cm",
+      "name": "Sepal.Length",
+      "description": "The length of the sepal of the flower"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "cm",
+      "name": "Sepal.Width",
+      "description": "The Width of the sepal of the flower"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "Petal.Length",
+      "description": null
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "Petal.Width",
+      "description": null
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "Species",
+      "description": null
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "mpg",
+      "description": null
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "cyl",
+      "description": null
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "disp",
+      "description": null
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "hp",
+      "description": null
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "drat",
+      "description": null
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "wt",
+      "description": null
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "qsec",
+      "description": null
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "vs",
+      "description": null
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "am",
+      "description": null
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "gear",
+      "description": null
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "carb",
+      "description": null
+    }
+  ],
+  "distribution": [
+    {
+      "type": "DataDownload",
+      "name": "iris",
+      "contentUrl": "https://raw.githubusercontent.com/Sustainscapes/MetadataTest/master/FakeData/iris.csv",
+      "encodingFormat": "csv"
+    },
+    {
+      "type": "DataDownload",
+      "name": "mtcars",
+      "contentUrl": "https://raw.githubusercontent.com/Sustainscapes/MetadataTest/master/FakeData/mtcars.csv",
+      "encodingFormat": "csv"
+    }
+  ]
+}
+
+    </script>
+    <style>
+      body {
+        font-size: 16px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        margin: 0 auto;
+        padding: 1rem;
+        max-width: 800px;
+      }
+
+      #map {
+        height: 20rem;
+      }
+
+      #attributes-wrapper,
+      #jsonld-wrapper {
+        height: 20rem;
+        overflow-y: scroll;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      th {
+        border-bottom: 1px solid black;
+      }
+
+      th, td {
+        padding: 0.25rem;
+      }
+
+      table.listing td {
+        border: 1px solid #CCC;
+      }
+
+      table.listing tr td:first-child {
+          background-color: #EEE;
+      }
+
+      table.listing ul {
+        margin: 0 0 0 1.5rem;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Test for metadate</h1>
+    <p><strong>Description:</strong> This is a test where we have some data and try to create some metadata</p>
+
+    <h2>Bibliographic</h2>
+
+    <table class="listing">
+      <tr>
+        <td>Published</td>
+        <td>2021-11-04</td>
+      </tr>
+      <tr>
+        <td>Keywords</td>
+        <td>
+          <ul>
+            <li>WP5</li>
+        </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Funder</td>
+        <td>Sustainscapes</td>
+      </tr>
+      <tr>
+        <td>License</td>
+        <td></td>
+      </tr>
+    </table>
+
+    <h2>Coverage</h2>
+
+    <h3>Temporal</h3>
+
+    <table class="listing">
+      <tr>
+        <td>Begin</td>
+        <td>NA</td>
+      </tr>
+      <tr>
+        <td>End</td>
+        <td>NA</td>
+      </tr>
+    </table>
+
+    <h3>Spatial</h3>
+    <pre><code></code></pre>
+    <div id="map"></div>
+
+    <h2>Attributes</h2>
+
+    <div id="attributes-wrapper">
+      <table id="attributes">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Unit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>Sepal.Length</code></td>
+            <td>The length of the sepal of the flower</td>
+            <td>cm</td>
+          </tr>
+          <tr>
+            <td><code>Sepal.Width</code></td>
+            <td>The Width of the sepal of the flower</td>
+            <td>cm</td>
+          </tr>
+          <tr>
+            <td><code>Petal.Length</code></td>
+            <td>This is a test where we have some data and try to create some metadata</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>Petal.Width</code></td>
+            <td>This is a test where we have some data and try to create some metadata</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>Species</code></td>
+            <td>This is a test where we have some data and try to create some metadata</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>mpg</code></td>
+            <td>This is a test where we have some data and try to create some metadata</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>cyl</code></td>
+            <td>This is a test where we have some data and try to create some metadata</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>disp</code></td>
+            <td>This is a test where we have some data and try to create some metadata</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>hp</code></td>
+            <td>This is a test where we have some data and try to create some metadata</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>drat</code></td>
+            <td>This is a test where we have some data and try to create some metadata</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>wt</code></td>
+            <td>This is a test where we have some data and try to create some metadata</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>qsec</code></td>
+            <td>This is a test where we have some data and try to create some metadata</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>vs</code></td>
+            <td>This is a test where we have some data and try to create some metadata</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>am</code></td>
+            <td>This is a test where we have some data and try to create some metadata</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>gear</code></td>
+            <td>This is a test where we have some data and try to create some metadata</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><code>carb</code></td>
+            <td>This is a test where we have some data and try to create some metadata</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Distribution</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>File</th>
+          <th>Format</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>iris</code></td>
+          <td><code>csv</code></td>
+          <td><a href="https://raw.githubusercontent.com/Sustainscapes/MetadataTest/master/FakeData/iris.csv">Download</a></td>
+        </tr>
+        <tr>
+          <td><code>mtcars</code></td>
+          <td><code>csv</code></td>
+          <td><a href="https://raw.githubusercontent.com/Sustainscapes/MetadataTest/master/FakeData/mtcars.csv">Download</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+  integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+  crossorigin=""></script>
+    <script>
+      var mymap = L.map('map').setView([55, 11], 1);
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+        maxZoom: 18,
+      }).addTo(mymap);
+
+      var polygon = L.polygon([[ 60, 15], [ 50, 15], [ 50, 7], [ 60, 7]]).addTo(mymap);
+    </script>
+  </body>
+</html>

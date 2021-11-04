@@ -1,0 +1,147 @@
+{
+  "@context": "http://schema.org",
+  "type": "Dataset",
+  "name": "Test for metadate",
+  "creator": [
+    {
+      "type": "Person",
+      "id": null,
+      "email": "derk.corcoran@bio.au.dk",
+      "affiliation": "Sustainscapes",
+      "name": "Derek  Corcoran"
+    },
+    {
+      "type": "Person",
+      "id": null,
+      "email": "heidilunde@bio.au.dk",
+      "affiliation": "Sustainscapes",
+      "name": "Heidi Dueholm Lunde"
+    }
+  ],
+  "description": "This is a test where we have some data and try to create some metadata",
+  "datePublished": "2021-11-04",
+  "keywords": "WP5",
+  "funder": "Sustainscapes",
+  "temporalCoverage": "NA/NA",
+  "license": null,
+  "spatialCoverage": {
+    "type": "Place",
+    "name": "Denmark",
+    "geo": {
+      "type": "GeoShape",
+      "box": "60 15 50 7"
+    }
+  },
+  "variableMeasured": [
+    {
+      "type": "PropertyValue",
+      "unitText": "cm",
+      "name": "Sepal.Length",
+      "description": "The length of the sepal of the flower"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": "cm",
+      "name": "Sepal.Width",
+      "description": "The Width of the sepal of the flower"
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "Petal.Length",
+      "description": null
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "Petal.Width",
+      "description": null
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "Species",
+      "description": null
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "mpg",
+      "description": null
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "cyl",
+      "description": null
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "disp",
+      "description": null
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "hp",
+      "description": null
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "drat",
+      "description": null
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "wt",
+      "description": null
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "qsec",
+      "description": null
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "vs",
+      "description": null
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "am",
+      "description": null
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "gear",
+      "description": null
+    },
+    {
+      "type": "PropertyValue",
+      "unitText": null,
+      "name": "carb",
+      "description": null
+    }
+  ],
+  "distribution": [
+    {
+      "type": "DataDownload",
+      "name": "iris",
+      "contentUrl": "https://raw.githubusercontent.com/Sustainscapes/MetadataTest/master/FakeData/iris.csv",
+      "encodingFormat": "csv"
+    },
+    {
+      "type": "DataDownload",
+      "name": "mtcars",
+      "contentUrl": "https://raw.githubusercontent.com/Sustainscapes/MetadataTest/master/FakeData/mtcars.csv",
+      "encodingFormat": "csv"
+    }
+  ]
+}

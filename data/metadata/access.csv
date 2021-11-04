@@ -1,0 +1,3 @@
+fileName,name,contentUrl,encodingFormat
+iris.csv,iris,https://raw.githubusercontent.com/Sustainscapes/MetadataTest/master/FakeData/iris.csv,csv
+mtcars.csv,mtcars,https://raw.githubusercontent.com/Sustainscapes/MetadataTest/master/FakeData/mtcars.csv,csv
