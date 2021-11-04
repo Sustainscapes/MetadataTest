@@ -47,4 +47,7 @@ build_site()
 ### Now turn it into a EML file
 
 EMLTest <- spice_to_eml()
+
+
+#write eml to xml2
 write_eml(EMLTest,  "docs/test.xml")
