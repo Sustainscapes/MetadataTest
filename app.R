@@ -33,14 +33,14 @@ ui <- fluidPage(
 # Define server logic required to draw a histogram
 server <- function(input, output) {
   output$TableData <- renderDataTable({
-      editable = list(target = "column", disable = list(columns = c(1,2)))#all coloumns except 1 and 2 are editable
       file <- input$file
+      validate(
+        need(input$file != "", " ")
+      )
       ext <- tools::file_ext(file$datapath)
-      output$value <- renderPrint({ input$text })
-      desc <- output$value
       Vars <- colnames(read.csv(file$datapath))
       DF <- data.frame(Variables = Vars, 
-                       Description = desc, 
+                       Description = NA, 
                        Units = NA, 
                        File = file$name,
                        path = file$datapath)
