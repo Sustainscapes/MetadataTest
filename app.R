@@ -9,6 +9,7 @@
 
 library(shiny)
 library(tidyselect)
+library(DT)
 
 
 
@@ -21,19 +22,17 @@ ui <- fluidPage(
 
     # Sidebar with a slider input for loading a file
     sidebarLayout(
-        sidebarPanel(
-            fileInput("file", label = h3("Input data")),
+      sidebarPanel(
+        fileInput("file", label = h3("Input data")),
         ),
 
         # Show a table and a plot of the data
-        mainPanel(
-          tabsetPanel(
-            tabPanel("Table",DT::DTOutput("TableData")),
-            tabPanel("Plot",plotOutput("plot"))
+    mainPanel(
+      tabsetPanel(
+        tabPanel("Table",DT::DTOutput("TableData")),
+        tabPanel("Plot",plotOutput("plot"))
           )
-           
         )
-        
     )
 )
 
@@ -42,24 +41,29 @@ server <- function(input, output) {
   
   #making the datatable
   output$TableData <- DT::renderDT({
-      file <- input$file
-      
-      #when no file is selected there will be no error
-      validate(
-        need(input$file != "", " ") 
+    file <- input$file
+    
+    #when no file is selected there will be no error
+    validate(
+      need(input$file != "", " ") 
       )
+    
+    #creating Variable column
+    Vars <- colnames(read.csv(file$datapath))
       
-      Vars <- colnames(read.csv(file$datapath))
+    DF <- data.frame(Variables = Vars, 
+                     Description = NA, 
+                     Units = NA,
+                     File = file$name,
+                     path = file$datapath)
       
-      DF <- data.frame(Variables = Vars, 
-                       Description = NA, 
-                       Units = NA, 
-                       File = file$name,
-                       path = file$datapath)
+    #To make the Description column editable
+    DF1<-datatable(DF, 
+                   editable =  list(target = "cell", disable = list(columns = c(1,3,4,5))),
+                   selection=c("none"))
       
-      #making Description column editable
-      editable = list(target = 'column' , disable = list( columns =1,3,4,5) )
-      DF})
+    
+    DF1})
   
   #making the plot
   output$plot <- renderPlot({
