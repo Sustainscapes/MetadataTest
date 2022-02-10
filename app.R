@@ -42,7 +42,6 @@ server <- function(input, output) {
   #making the datatable
   output$TableData <- DT::renderDT({
     file <- input$file
-    
     #when no file is selected there will be no error
     validate(
       need(input$file != "", " ") 
@@ -57,13 +56,16 @@ server <- function(input, output) {
                      File = file$name,
                      path = file$datapath)
       
-    #To make the Description column editable
-    DF1<-datatable(DF, 
+    #To make the Description column editable and to save the data table
+    DT<-datatable(DF, 
                    editable =  list(target = "cell", disable = list(columns = c(1,3,4,5))),
-                   selection=c("none"))
+                   selection=c("none"),
+                   extensions='Buttons',
+                   options=list(dom='Bfrtip', buttons=list('copy', 'pdf', 'csv', 'excel')))
+    
       
     
-    DF1})
+    DT})
   
   #making the plot
   output$plot <- renderPlot({
